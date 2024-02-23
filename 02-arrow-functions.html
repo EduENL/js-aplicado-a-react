@@ -11,10 +11,15 @@
   <script>
 
 
+    // Função sintaxe tradicional
+    function nomeDaFuncao() {
+      exibirNaTela('Função de sintaxe tradicional')
+    }
 
-    //1ª Digitação (aqui) 
-
-
+    // Função anônima 
+    var outraFuncao = function() {
+      exibirNaTela('Outra forma de declarar função')
+    }
 
     // Chamada da função
     nomeDaFuncao();
@@ -27,10 +32,11 @@
     para uma variável externa */
 
 
+    function exercicio(valorA, valorB) {
+      return valorA - valorB;
+    }
 
-    //2ª Digitação (aqui) 
-
-
+    let resultado = exercicio(3, 2)
 
     exibirNaTela(resultado);
 
@@ -61,16 +67,18 @@
     exibirNaTela(multiplicaValores(50));
     
     exibirNaTela('==========================');
-
+    
     /* Exercício 2
     - Monte uma arrow function que receba um nome de pessoa e a converta para letras maiúsculas.
     - Chame a função 3x (passando nomes diferentes) e exibindo no console e tela os resultados */
 
     
 
-    //3ª Digitação (aqui) 
+    const nomes = nome => nome.toUpperCase();
 
-
+    exibirNaTela(nomes('eduardo'));
+    exibirNaTela(nomes('pedro'));
+    exibirNaTela(nomes('jorge'));
 
     function exibirNaTela(texto) {
       // Exibe a mensagem no console do navegador
