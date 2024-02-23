@@ -10,11 +10,25 @@
 
   <script>
 
+    class Pessoa {
+      // Propriedades 
+      nome = 'sem nome';
+      genero = 'não informado';
+      idade;
 
+      // métodos
+      mostraGenero() {
+        exibirNaTela(this.genero);
+      }
 
-    //1ª Digitação (aqui) 
+      mostraNome() {
+        exibirNaTela(this.nome);
+      }
 
-
+      verificaIdade() {
+        return this.idade >=18 ? 'é maior' : 'é menor' 
+      }
+  }
 
     // Traz tudo da classe mãe (Pessoa) + as particularidades da classe (Aluno)
     class Aluno extends Pessoa {
@@ -35,22 +49,34 @@
 
     // Criando objetos/ instâncias
 
+    let umaPessoa = new Pessoa;
+    umaPessoa.nome = 'Eduardo'
+    umaPessoa.genero = 'Masculino'
+    umaPessoa.idade = 16
+    
+    exibirNaTela(umaPessoa);
 
-
-    //2ª Digitação (aqui) 
-
+    let outraPessoa = new Pessoa;
+    outraPessoa.nome = 'Isabela'
+    outraPessoa.genero = 'Feminino'
+    outraPessoa.idade = 18
+    
+    exibirNaTela(outraPessoa);
 
 
 
     // Objeto herdando recursos
 
+    let aluno = new Aluno
+    aluno.nome = 'Vitória'
+    aluno.genero = 'Feminino'
+    aluno.matricula = '123abc'
+    aluno.curso = 'JS para React'
+    aluno.idade = 25
 
-
-
-     //3ª Digitação (aqui) 
-
-
-
+    exibirNaTela(aluno.nome);
+    exibirNaTela(aluno.idade);
+    exibirNaTela(aluno.verificaIdade());
 
     // Console.log(aluno)
     aluno.mostraDados();
@@ -65,16 +91,16 @@
     }
 
     // Usando string JSON 
-    // function exibirNaTela(objeto) {
+     function exibirNaTela(objeto) {
     //   // Converte o objeto para uma string JSON formatada
-    //   const jsonString = JSON.stringify(objeto, null, 2);
+       const jsonString = JSON.stringify(objeto, null, 2);
 
     //   // Exibe a mensagem no console do navegador
-    //   console.log(jsonString);
+       console.log(jsonString);
 
     //   // Exibe a mensagem na tela da página
-    //   document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
-    // }
+       document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
+     }
 
   </script>
 </body>

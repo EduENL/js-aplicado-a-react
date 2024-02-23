@@ -16,7 +16,8 @@
 
 
 
-    //1ª Digitação (aqui) 
+    const bandas = ['Metálicas', 'Guns n Roses', 'RHCP', 'Deep Purple'];
+    const maisbandas = [...bandas, 'Charlie Brown JR', 'Mega Death'];
 
 
 
@@ -27,9 +28,20 @@
     // Spread com objeto
 
 
+    const dados = {
+      nome: 'Viviane',
+      idade: 23
+    };
 
-    //2ª Digitação (aqui) 
-
+    const novosDados = {
+      ...dados,
+      cidade: 'São Paulo',
+      estado: 'SP',
+      idade: 25
+    };
+    exibirNaTela(dados);
+    exibirNaTela(novosDados);
+    exibirNaTela(novosDados.idade);
 
 
     function exibirNaTela(texto) {

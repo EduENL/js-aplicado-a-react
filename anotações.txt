@@ -1,0 +1,7 @@
+-Programação estruturada
+-Programação orientada a objeto "POO"
+    Vantagens 
+        Aproveitamento de código
+        Maior performance
+    Desvantagens
+        Curva de aprendizada maior
